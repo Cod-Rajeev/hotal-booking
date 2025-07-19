@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="D:\SSBPO\TREVOC ROYAL RESIDENCES\favicon_io\favicon-32x32.png">
+    <title>Hotal-Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+<style>
+        body{
+            margin: 0%;
+        }
+       .navbar-brand{
+        margin-left: 140px;
+       }
+
+      .hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image img {
+      height: 100%;
+      width: 100%;
+      
+    }
+    .text-box {
+      position: absolute;
+      top: 30vh;
+      left: 30vh;
+      background: rgba(0, 0, 0, 0.65);
+      color: white;
+      padding: 1.5rem 2rem;
+      max-width: 350px;
+      /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+      border-radius: 0.25rem;
+    }
+    .text-box h2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      /* margin-bottom: 0.2rem; */
+    }
+    .text-box h5 {
+      font-weight: 400;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #d90429;
+      /* padding-bottom: 0.3rem; */
+    }
+    .text-box ul {
+      padding-left: 1rem;
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    .form-box{
+      position: absolute;
+      height: 80vh;
+      width: 400px;
+      border: 1vh solid black;
+      top: 30vh;
+      left: 140vh;
+      /* background: rgba(0, 0, 0, 0.65); */
+      background: rgba(255, 255, 255,0.45);
+      color: black;
+      padding: 1.5rem 2rem;
+      max-width: 350px;
+      /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+      border-radius: 0.25rem;
+      
+    }
+
+
+    .first-pera{
+      margin-top: 10vh;
+      margin-left: 12vh;
+      margin-right: 12vh;
+      text-align: justify;
+    }
+
+
+
+     .second-img{
+    background-color: #f5f5f5;
+    font-family: 'Georgia', serif;
+    margin-top: 15vh;
+    padding: 20px;
+  }
+  .second-img-h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.4rem;
+    margin-bottom: 0;
+    color: #222;
+    letter-spacing: 1px;
+  }
+   .second-img-h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-style: normal;
+    color: #222;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+  }
+  .card {
+    background: #000;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    overflow: hidden;
+    color: #fff;
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+  .card img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .caption {
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1rem;
+    user-select: none;
+  }
+
+
+  .price-list{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-color: #76b6eb;
+    color: white;
+  }
+
+
+  .price-list-h1{
+    position: absolute;
+    margin-left: 20vh;
+    margin-top: 10vh;
+  }
+
+  .card-price-list-1{
+    margin-top: 25vh;
+    text-align: center;
+    border-radius: 10%;
+    position: absolute;
+    height: 50vh;
+    width: 50vh;
+    background-color: white;
+    color: black;
+    margin-left: 15vh;
+  }
+
+
+
+  .card-price-list-1 h5{
+    margin-top: 5vh;
+  }
+
+  .card-price-list-1 p {
+    margin-top: 5vh;
+    font-size: 3vh;
+  }
+  .card-price-list-1 button{
+    margin-top: 2vh;
+    border-radius: 10%;
+    
+  }
+
+  /* .card-price-list-1 button :hover{
+    background-color: red;
+  } */
+
+  .card-price-list-2{
+    margin-left: 65vh;
+  }
+
+  .card-price-list-3{
+    margin-left: 130vh;
+  }
+
+
+
+  .third-img{
+    display: flex;
+    margin-top: 20vh;
+  }
+ 
+  .third-img-text{
+     margin-left: 10vh;
+     margin-right: 10vh;
+
+  }
+
+
+  .forth-img{
+    width: 100%;
+    height: 15vh;
+    margin-top: 10vh;
+    background-color: #f7f1f1;
+    text-align: center;
+  }
+
+  .forth-img h1 h2{
+    margin: 5vh;
+  }
+
+
+
+  .scroller-container {
+      width: 100%;
+      overflow-x: auto; /* Horizontal scroll */
+      white-space: nowrap; /* Line break na ho */
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+    }
+
+    .scroller-container img {
+      width: 70%;
+      height: 80vh;
+      margin-right: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      object-fit: cover;
+    }
+
+    /* Scrollbar styling (optional) */
+    .scroller-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scroller-container::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    .scroller-container::-webkit-scrollbar-track {
+      background: #ddd;
+    }
+
+
+
+    .about{
+      margin-top: 10vh;
+      width: 100%;
+      height: 60vh;
+      background-color: #e1f5f7;
+      text-align: justify;
+    }
+
+    .about-text{
+      margin-left: 12vh;
+      margin-right: 12vh;
+      
+    }
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    footer ul li a {
+      color: white;
+      /* text-decoration: none; */
+    }
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp-icon {
+      background-color: #25D366;
+    }
+    .whatsapp-icon:hover {
+      background-color: #1ebe57;
+    }
+    .phone-icon {
+      background-color: #e60000;
+    }
+    .phone-icon:hover {
+      background-color: #bf0000;
+    }
+    .social-icons a {
+      color: white;
+      opacity: 0.5;
+      font-size: 1.4rem;
+      margin-right: 1rem;
+      transition: opacity 0.3s ease;
+    }
+    .social-icons a:hover {
+      opacity: 1;
+      color: #ff5722;
+      text-decoration: none;
+    }
+</style>
+</head>
+<body>
+
+    <nav class="navbar bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="https://static.wixstatic.com/media/4b9359_a61a630b014942e88d88715fd3722fc6~mv2.jpg/v1/crop/x_26,y_0,w_412,h_125/fill/w_129,h_39,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo.jpg" alt="">
+    </a>
+    <h1 style="color: white; margin-right: 40px;">📞<a href="tel: +91 111100011" aria-label="Phone contact link" style="color: white;">   +91 1111 00011</a></i></h1>
+  </div>
+</nav>
+
+
+   <section class="hero-image">
+    <img src="https://static.wixstatic.com/media/4b9359_488833028fd94fa5a3f8866c6845dc22~mv2.jpg/v1/fill/w_981,h_584,al_c,q_85,enc_avif,quality_auto/4b9359_488833028fd94fa5a3f8866c6845dc22~mv2.jpg" alt="Modern residential towers with rooftop gardens and green terraces at sunset, showcasing luxury urban living with warm ambient light" onerror="this.style.display='none';" />
+    
+    <div class="text-box">
+      <h2>Trevoc Royal Residences</h2>
+      <h5>Golf Course Road, Sector 57</h5>
+      <ul>
+        <li>Land - 2.10 Acres</li>
+        <li>2 Towers - 2 Twin Building</li>
+        <li>G+28 Floors</li>
+        <li>Total No of Units: 172</li>
+        <li>Investment Starts @ ₹5.65 Cr* Only</li>
+        <li>Location: Sector 56, Golf Course</li>
+        <li>5 Levels of Car Parking</li>
+        <li>Private Lobbies for Every Apartment</li>
+      </ul>
+    </section>
+
+    <form action="" class="form-box">
+      <h2>Contact us</h2>
+      <label for="fullname" class="form-label">Full Name *</label>
+      <input type="text" placeholder="Please Enatr Your Name"> <br>
+           <label for="phone">Phone <span aria-hidden="true">*</span></label>
+          <div class="phone-input-container">
+          <input type="tel" id="phone" name="phone" placeholder="+91 9876543210"/>
+          </div>
+
+          <fieldset aria-describedby="budget-desc">
+          <legend>Are you looking for Luxury Residences by Trevoc starting at Rs. 5 Cr?</legend>
+          <p id="budget-desc" class="sr-only">Choose one option</p>
+          <div class="radio-group" role="radiogroup" aria-labelledby="budget-desc">
+            <label class="radio-label" for="interested-yes">
+              <input type="radio" id="interested-yes" name="interest" value="yes" required />
+              <span class="radio-custom"></span>
+              Yes, I am interested.
+            </label>
+            <label class="radio-label" for="interested-no">
+              <input type="radio" id="interested-no" name="interest" value="no" />
+              <span class="radio-custom"></span>
+              No, I want lower budget.
+            </label>
+          </div>
+        </fieldset>
+                <button type="submit" class="submit-btn" aria-label="Submit contact form">Submit</button>
+    </form>
+    </div>
+
+    <div class="first-pera">
+      <h1>TREVOC ROYAL RESIDENCES</h1>
+      <p>
+TREVOC ROYAL RESIDENCES
+Welcome to TREVOC ROYAL RESIDENCES, an ultra-luxury project launched in the prestigious Sector 56 along Golf Course Road, Gurgaon. This exceptional development boasts 172 exclusive units, featuring expansive 3.5 BHK and 4.5 BHK apartments designed for opulent living. With an impressive G+28 elevation and a host of high-end amenities, residents can enjoy the lavish CLUB ROYAL clubhouse, sprawling across 50,000 sq. ft., and a stunning SKYDECK that offers breathtaking 360-degree views. <br><br><br>
+The residences are thoughtfully designed with private lobbies, study niches, and wrap-around balconies that enhance both privacy and luxury. Conveniently located amidst lush greenery and equipped with five levels of car parking, TREVOC ROYAL RESIDENCES presents a unique opportunity for elevated living at an effective rate of Rs 23,999 per sq. ft., along with attractive inaugural discounts. Discover the ultimate lifestyle experience where luxury meets nature. For more information or to schedule a visit, feel free to reach out!</p>
+    </div>
+
+
+
+   <div class="second-img"> 
+<h1 class="second-img-h1">TREVOC ROYAL RESIDENCES</h1>
+<h2 class="second-img-h2">Project Amenities</h2>
+
+<div class="container">
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_0a1667697d564bce87b3a2d919d38003~mv2.jpg/v1/fill/w_258,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/focused_254644294-stock-photo-clubhouse-tables-seats-highrise-hotel.jpg" alt="Club House cozy interior with natural lighting and elegant furniture" onerror="this.style.display='none'"/>
+    <div class="caption">Club House</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_488833028fd94fa5a3f8866c6845dc22~mv2.jpg/v1/fill/w_286,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Trevoc-Royal-Residences-the-heart-skip.jpg" alt="Sky Deck aerial view of a building roof garden with greenery and cityscape" onerror="this.style.display='none'"/>
+    <div class="caption">Sky Deck</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_da8a62db663043309d9a24c121f25a8d~mv2.jpeg/v1/fill/w_266,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/pexels-photo-1954524.jpeg" alt="Modern gym with treadmills and glass windows with view outside" onerror="this.style.display='none'"/>
+    <div class="caption">Gymnastics</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_b394b658e8bb459daa4e2d5f4c69105e~mv2.jpg/v1/fill/w_266,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4b9359_b394b658e8bb459daa4e2d5f4c69105e~mv2.jpg" alt="Woman interacting with a 7-tier security intercom system device on wall" onerror="this.style.display='none'"/>
+    <div class="caption">7 tier security</div>
+  </div>
+
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_2dceea55a26c423ab0e7f77709522c8b~mv2.jpg/v1/fill/w_258,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4b9359_2dceea55a26c423ab0e7f77709522c8b~mv2.jpg" alt="Salon interior decor with spa candles and relaxing items" onerror="this.style.display='none'"/>
+    <div class="caption">Salon & Spa</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_be1dc2500e6241449f9ef5edffd014e9~mv2.jpg/v1/fill/w_294,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/istockphoto-473313240-612x612.jpg" alt="Kids play area outdoors with children playing on colorful playground equipment" onerror="this.style.display='none'"/>
+    <div class="caption">Kids Play Area</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_12c0eb39bb1f468aae67e90d33a6fb75~mv2.jpg/v1/fill/w_271,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/istockphoto-1392157204-612x612.jpg" alt="Top view of swimming pool with person relaxing on pool edge" onerror="this.style.display='none'"/>
+    <div class="caption">Swimming Pool</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_46a87745f8974889afea4aec4888d254~mv2.jpg/v1/fill/w_266,h_145,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/istockphoto-616002088-170667a.jpg" alt="Jogging track with runner in athletic shoes running on a sunlit path" onerror="this.style.display='none'"/>
+    <div class="caption">Jogging Tracks</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_abcb9338e5044d93aa0627e302728bb4~mv2.jpg/v1/fill/w_259,h_139,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4b9359_abcb9338e5044d93aa0627e302728bb4~mv2.jpg" alt="Club House cozy interior with natural lighting and elegant furniture" onerror="this.style.display='none'"/>
+    <div class="caption">Firefighting Equipment</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_444502705ed3465ab6fc952689bebeb8~mv2.jpg/v1/fill/w_299,h_139,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/vastu-compliant.jpg" alt="Sky Deck aerial view of a building roof garden with greenery and cityscape" onerror="this.style.display='none'"/>
+    <div class="caption">Vastu compliant</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_f957aea0c14e45709bb304afc08e074e~mv2.png/v1/fill/w_266,h_139,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/control-room-with-multiple-monitors-lot-screens-wall-generative-ai_97167-7408.png" alt="Modern gym with treadmills and glass windows with view outside" onerror="this.style.display='none'"/>
+    <div class="caption">24/7 Security </div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_cca788ef344a455c8ee3a7d6234d677d~mv2.jpg/v1/fill/w_259,h_139,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4b9359_cca788ef344a455c8ee3a7d6234d677d~mv2.jpg" alt="Woman interacting with a 7-tier security intercom system device on wall" onerror="this.style.display='none'"/>
+    <div class="caption">Waiting Lounge</div>
+  </div>
+
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_e1423c96c8974a7baefb85c1962ef6c8~mv2.jpg/v1/fill/w_266,h_148,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/parking-cars-without-people-260nw-1014849688.jpg" alt="Salon interior decor with spa candles and relaxing items" onerror="this.style.display='none'"/>
+    <div class="caption">5 Layers Car Parking</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_351a51b30e234da793aa2959ca68f351~mv2.jpg/v1/fill/w_299,h_148,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4b9359_351a51b30e234da793aa2959ca68f351~mv2.jpg" alt="Kids play area outdoors with children playing on colorful playground equipment" onerror="this.style.display='none'"/>
+    <div class="caption">Multipurpose Hall</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_0fe7f129a0034b21b6e65ee3ce68fdfc~mv2.jpg/v1/fill/w_272,h_148,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/360_F_602592221_UmtxhQNEFK7RzGI57TQk1jtLpiUPd1ob.jpg" alt="Top view of swimming pool with person relaxing on pool edge" onerror="this.style.display='none'"/>
+    <div class="caption">Football Court</div>
+  </div>
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/4b9359_cbaf989ca81f4a01b7bccc5fd80febbf~mv2.jpg/v1/fill/w_259,h_148,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4b9359_cbaf989ca81f4a01b7bccc5fd80febbf~mv2.jpg" alt="Jogging track with runner in athletic shoes running on a sunlit path" onerror="this.style.display='none'"/>
+    <div class="caption">Badminton Court</div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="price-list">
+  <div class="price-list-h1">
+  <h1 >Project Price list</h1>
+  </div>
+    <div class="card-price-list-1">
+      <h5><strong>3.5 BHK APARTMENT (TYPE A)</strong></h5>
+      <hr style="height: 0.60vh; background-color: black; margin-right: 5vh; margin-left: 5vh;">
+      <p>2642 SQ.FT</p>
+      <hr style="height: 0.60vh; background-color: black; margin-right: 5vh; margin-left: 5vh;">
+      <p>5.65 Cr* Onwards</p>
+            <hr style="height: 0.60vh; background-color: black; margin-right: 5vh; margin-left: 5vh;">
+      <button>Enquire Now</button>
+    </div>
+    <div class="card-price-list-2">
+      <div class="card-price-list-1">
+      <h5><strong>3.5 BHK APARTMENT (TYPE A)</strong></h5>
+      <hr style="height: 0.60vh; background-color: black; margin-right: 5vh; margin-left: 5vh;">
+      <p>2642 SQ.FT</p>
+      <hr style="height: 0.60vh; background-color: black; margin-right: 5vh; margin-left: 5vh;">
+      <p>5.65 Cr* Onwards</p>
+            <hr style="height: 0.60vh; background-color: black; margin-right: 5vh; margin-left: 5vh;">
+      <button>Enquire Now</button>
+    </div>
+    </div>
+    <div class="card-price-list-3">
+      <div class="card-price-list-1">
+      <h5><strong>3.5 BHK APARTMENT (TYPE A)</strong></h5>
+      <hr style="height: 0.60vh; background-color: black; margin-right: 5vh; margin-left: 5vh;">
+      <p>2642 SQ.FT</p>
+      <hr style="height: 0.60vh; background-color: black; margin-right: 5vh; margin-left: 5vh;">
+      <p>5.65 Cr* Onwards</p>
+            <hr style="height: 0.60vh; background-color: black; margin-right: 5vh; margin-left: 5vh;">
+      <button>Enquire Now</button>
+    </div>
+    </div>
+</div>
+
+
+
+
+<div class="third-img">
+  <img src="https://static.wixstatic.com/media/4b9359_0fcc28316d6b4d6bab63d297fcbc9a21~mv2.jpg/v1/fill/w_677,h_544,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4b9359_0fcc28316d6b4d6bab63d297fcbc9a21~mv2.jpg" alt="">
+
+  <div class="third-img-text">
+    <h1>Trevoc Royal Residences Location Advantage</h1>
+    <p>
+    TREVOC ROYAL RESIDENCES redefines luxury living in Gurgaon with its exceptional offerings in Sector 56, Golf Course Road. This premier development features a strategic location that provides effortless access to key transport routes, facilitating smooth daily commutes. Nestled amidst sectors 57, 65, 61, and 63, residents are surrounded by a rich tapestry of retail, commercial, and entertainment options, ensuring a vibrant and convenient lifestyle. With lush green surroundings and top-tier amenities, TREVOC ROYAL RESIDENCES combines elegance with accessibility, making it an ideal choice for discerning homeowners seeking both comfort and sophistication in the heart of Gurgaon.
+<br><br><br>
+    ✅ Just 5 minutes from Golf Course Road <br>
+    ✅ 5 minutes to NH48 & Dwarka Expressway <br>
+    ✅ Only 25 minutes to IGI Airport <br>
+    ✅ 2 Min away from sector 56 Metro Station <br>
+    ✅ 5 Min from DLF Camellias <br>
+    ✅ 8 Mins to Corporate Hubs <br>
+    </p>
+  </div>
+</div>
+
+
+
+    <div class="forth-img">
+    <h1>TREVOC ROYAL RESIDENCES</h1>
+    <h2>GALLERY</h2>
+    </div>
+
+
+
+    <div class="scroller-container">
+    <img src="https://www.hoteltheroyalplaza.com/images/room_banner_1.jpg" alt="Image 1">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/376575953.jpg?k=155b7f8971372c311e480b9bdb54619acb1cff992af25017f535f6019a64de55&o=&hp=1" alt="Image 2">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/18/24/bb/cf/royal.jpg" alt="Image 3">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/61/d0/7b/hotel-royal-singapore.jpg" alt="Image 4">
+    <img src="https://www.theroyalhotel.ca/wp-content/uploads/2021/12/TheRoyal_Rooms_Cortland_Bed-scaled.jpg?x76931" alt="Image 5">
+    <img src="https://806d2bf04cf5fa54997a-e7c5344b3b84eec5da7b51276407b19c.ssl.cf1.rackcdn.com/u/hotel-cafe-royal/Hotel-Cafe-Royal---Exterior-Day.jpg" alt="Image 6">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFb4Dd5GAsJKucsUYz3XAOY3KJiEEWNp8IoA&s" alt="Image 7">
+    <img src="https://www.hoteltheroyalplaza.com/images/banner-slider2.jpg" alt="Image 8">
+    <img src="https://gos3.ibcdn.com/6a7c1284424c11eda3be0a58a9feac02.jpg" alt="Image 9">
+    <img src="https://r1imghtlak.mmtcdn.com/d00e37884e5d11e6b7d35ee5da2daa2a.jpg" alt="Image 10">
+  </div>
+
+
+
+  <div class="about">
+    <div class="about-text">
+      <h1>About Trevoc</h1>
+      <p>
+Introducing Trevoc Royal Residences – a premier luxury apartment offering in Sector 56, Gurgaon, strategically located on the esteemed Golf Course Road. This exciting new project in Gurgaon by Trevoc is set to redefine opulent living with its unparalleled design and world-class amenities.
+
+​<br><br>
+
+Trevoc is at the forefront of redefining real estate excellence with a commitment to innovation and high standards. Their expert team brings a wealth of industry knowledge and cutting-edge technology to every project. At Trevoc Royal Residences, this dedication is evident in every detail, ensuring a living experience that blends luxury with modern convenience. Trevoc’s approach emphasizes transparency, quality, and a deep understanding of contemporary needs, making this new project on Golf Course Road a true masterpiece in luxury living.
+
+​<br><br><br>
+
+This new project is tailored to meet the evolving needs of discerning homeowners, delivering an unmatched living experience in Gurgaon. Trevoc Royal Residences combines sophisticated design with cutting-edge features, creating an environment where comfort and style come together seamlessly. Experience the epitome of luxury living on Golf Course Road with Trevoc Royal Residences, where every detail is crafted with you in mind.</p>
+   
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!--+++++++++++ Footer +++++++++++++ -->
+
+
+  <footer style="background-color: #0c3b61;
+      color: white; margin-top: 10vh;" class="pt-5 pb-3">
+      <h1 style="text-align: center; color: #18eff7; margin-bottom: 10vh;">XYZ Business Private Limited (Company name)</h1>
+    <div class="container">
+      <div class="row text-white">
+        <!-- Services Column -->
+        <div class="col-md-3 mb-4">
+          <h5 class="footer-section-title">Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Digital Marketing</a></li>
+            <li><a href="#" class="footer-link">Content Marketing</a></li>
+            <li><a href="#" class="footer-link">Google Ads Management</a></li>
+            <li><a href="#" class="footer-link">PPC Services</a></li>
+            <li><a href="#" class="footer-link">ORM Services</a></li>
+            <li><a href="#" class="footer-link">Performance Marketing</a></li>
+            <li><a href="#" class="footer-link">Refund Policy</a></li>
+            <li><a href="#" class="footer-link">Wordpress Development</a></li>
+            <li><a href="#" class="footer-link">CMS Web Development</a></li>
+            <li><a href="#" class="footer-link">PHP Web Development</a></li>
+            <li><a href="#" class="footer-link">Ecommerce Development</a></li>
+            <li><a href="#" class="footer-link">Magneto Development</a></li>
+            <li><a href="#" class="footer-link">B2C Portal Development</a></li>
+            <li><a href="#" class="footer-link">Term & Condit</a></li>
+          </ul>
+        </div>
+
+        <!-- Map Column -->
+        <div class="col-md-5 mb-4">
+          <h5 class="footer-section-title">Map</h5>
+          <div class="ratio ratio-16x9 rounded shadow">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.9506190232!2d76.7635627682216!3d28.644287449747026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1752838259108!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- Address Column -->
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-section-title">Our Address :</h5>
+          <p class="mb-1">
+            <strong>Compny name</strong><br />
+           Social Media Optimization (SMO)<br />
+            Office:- 000, 5th Floor, Vishwa Sadan Tower, District Centre, Janak Puri, <strong>New Delhi – 110058</strong>
+          </p>
+          <p class="mb-1"><strong>Contact No :</strong><br />
+            +91-0001100011, +91-0001100011<br />
+            011-0001110, 011-11111111
+          </p>
+          <p class="mb-3"><strong>Email :</strong><br />
+            info@gmail.com
+          </p>
+
+          <!-- Contact icons -->
+          <div>
+            <a href="https://wa.me/001111111" target="_blank" class="contact-icon whatsapp-icon" aria-label="WhatsApp contact link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.87 11.87 0 01-1.588-6.003C.156 5.305 5.478 0 12.036 0c3.21 0 6.22 1.25 8.464 3.507a11.822 11.822 0 013.533 8.38c-.003 6.604-5.373 11.953-12.005 11.953a11.945 11.945 0 01-6.59-1.913l-6.356 1.68zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.885-4.434 9.889-9.883.002-5.462-4.434-9.886-9.885-9.886-5.452 0-9.887 4.434-9.887 9.885a9.82 9.82 0 001.91 5.516l-.999 3.648 3.682-.964zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.148-1.758-.868-2.031-.967-.273-.099-.472-.148-.67.149-.198.297-.768.967-.941 1.164-.173.198-.347.223-.644.074-.297-.148-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.15-.174.2-.298.3-.497.1-.198.05-.372-.025-.52-.074-.148-.669-1.611-.916-2.207-.242-.579-.487-.5-.67-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.148.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </a>
+            <a href="tel:+9111111111" class="contact-icon phone-icon" aria-label="Phone contact link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M22.675 16.896l-5.798-2.566c-.798-.353-1.702-.028-2.14.716l-2.568 4.012a17.304 17.304 0 01-8.35-8.35l4.011-2.568c.742-.441 1.07-1.333.716-2.14L7.105 1.33C6.894.805 6.3.5 5.698.5H1.326A1.325 1.325 0 000 1.825C0 13.034 10.967 24 24 24c.725 0 1.325-.594 1.325-1.32v-4.375c0-.597-.37-1.18-.65-1.409zm-6.461 2.113l.077-.114-3.458-5.4a.667.667 0 00-.74-.316l-1.564.487c-.337.105-.487.493-.307.823l1.586 3.213-1.17.75a17.958 17.958 0 006.516 1.36z"/></svg>
+            </a>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="mt-4 social-icons">
+            <a href="#" aria-label="Facebook" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.736 0-1.325.589-1.325 1.325v21.351c0 .735.589 1.324 1.325 1.324h11.495v-9.294h-3.124v-3.622h3.124v-2.671c0-3.1 1.894-4.787 4.659-4.787 1.325 0 2.466.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.324-.589 1.324-1.324V1.325c0-.736-.589-1.325-1.324-1.325z"/></svg></a>
+            <a href="#" aria-label="Twitter" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.607 1.794-1.57 2.163-2.724-.949.564-2.002.974-3.127 1.195-.896-.956-2.173-1.555-3.591-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.248-2.229-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.734.2-1.522.232-2.224.084.623 1.946 2.444 3.362 4.6 3.403-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.557 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+            <a href="#" aria-label="Google Plus" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 11.383h5.837c-.258 1.52-2.24 4.49-5.837 4.49-3.483 0-6.323-2.889-6.323-6.449s2.84-6.448 6.323-6.448c2.007 0 3.352.854 4.13 1.595l2.812-2.7c-1.668-1.579-3.814-2.548-6.942-2.548-5.691 0-10.312 4.763-10.312 10.612s4.621 10.612 10.312 10.612c5.951 0 9.913-4.18 9.913-10.078 0-.675-.074-1.186-.162-1.7h-9.543v3.166zm11.786-.75v-1.5h-1.5v-1.5h-1.5v1.5h-1.5v1.5h1.5v1.5h1.5v-1.5h1.5z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.849-3.037-1.848 0-2.132 1.44-2.132 2.93v5.676h-3.553v-11.5h3.41v1.571h.049c.476-.9 1.637-1.849 3.37-1.849 3.602 0 4.269 2.37 4.269 5.459v6.319zm-16.45-13.13a2.07 2.07 0 110-4.142 2.07 2.07 0 010 4.142zm1.776 13.13h-3.553v-11.5h3.553v11.5z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex justify-content-between align-items-center px-4">
+      <div>
+        Copyright <strong>All Rights Reserved. Designed by </strong> <strong class="text-danger">Compny Name</strong> &copy;2019
+      </div>
+      <div>
+        Designed By 
+        <a href="https://aws-amazone-com-34632c.netlify.app/" target="_blank" rel="noopener" class="text-light">
+          Rajeev Kumar.
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
